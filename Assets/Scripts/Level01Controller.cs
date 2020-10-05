@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Level01Controller : MonoBehaviour
 {
     [SerializeField] Text _currentScoreTextView;
-
     int _currentScore;
 
     // Start is called before the first frame update
@@ -17,9 +16,13 @@ public class Level01Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Exit Level
+        //TODO Bring up popup menu for navigation
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ExitLevel();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
         }
 
         //Increase Score
@@ -29,8 +32,7 @@ public class Level01Controller : MonoBehaviour
             IncreaseScore(5);
         }
 
-        //Exit Level
-        //TODO Bring up popup menu for navigation
+        
     }
 
     public void ExitLevel()
@@ -53,5 +55,11 @@ public class Level01Controller : MonoBehaviour
         _currentScore += scoreIncrease;
         //update display
         _currentScoreTextView.text = "Score: " + _currentScore.ToString();
+    }
+
+    public void LockNHideMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
