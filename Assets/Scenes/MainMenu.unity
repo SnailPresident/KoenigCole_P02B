@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbb27fa9323c5a4b818db6172d80908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingSong: {fileID: 0}
+  _startingSong: {fileID: 8300000, guid: d73b2dc75f6b5524d9b842b3a5968540, type: 3}
   _highScoreTextView: {fileID: 265410136}
 --- !u!1 &644683433
 GameObject:

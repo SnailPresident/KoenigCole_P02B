@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentScoreTextView: {fileID: 337028325}
+  Menu: {fileID: 514440551}
 --- !u!4 &66732564
 Transform:
   m_ObjectHideFlags: 0

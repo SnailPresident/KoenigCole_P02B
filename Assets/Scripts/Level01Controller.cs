@@ -6,6 +6,7 @@ public class Level01Controller : MonoBehaviour
 {
     [SerializeField] Text _currentScoreTextView;
     int _currentScore;
+    public GameObject Menu;
     bool showMenu = false;
     // Start is called before the first frame update
     void Start()
@@ -16,8 +17,6 @@ public class Level01Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Exit Level
-        //TODO Bring up popup menu for navigation
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Escape pressed.");
@@ -25,15 +24,16 @@ public class Level01Controller : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-                //TURN MENU ON
+                Menu.SetActive(true);
                 showMenu = true;
                 Debug.Log("Menu On");
             }
+
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-                //TURN MENU OFF
+                Menu.SetActive(false);
                 showMenu = false;
                 Debug.Log("Menu Off");
             }
@@ -45,9 +45,7 @@ public class Level01Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IncreaseScore(5);
-        }
-
-        
+        }        
     }
 
     public void ExitLevel()
