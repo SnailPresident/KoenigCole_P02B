@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public float speed = 12f;
     public float gravity = -9.81f;
+
+    [SerializeField] Slider healthBar;
+    public float playerHealth = 100f;
 
     public Transform groundCheck;
     public float groundDistance = .4f;
@@ -57,5 +61,20 @@ public class PlayerMovement : MonoBehaviour
             AudioHelper.PlayClip2D(bang, 1);
             flash.Play();
         }
+
+        if (playerHealth <= 0)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneLoader.LoadScene("MainMenu");
+        }
+
+        healthBar.value = playerHealth;
+    }
+
+    private void Start()
+    {
+        healthBar.maxValue = playerHealth;
+        healthBar.minValue = 0;
     }
 }
