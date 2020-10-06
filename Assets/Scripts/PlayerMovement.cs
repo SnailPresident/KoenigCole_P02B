@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] ParticleSystem flash = null;
+    [SerializeField] AudioClip bang = null;
     public CharacterController controller;
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -38,8 +40,22 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 18f;
+        }
+        else
+        {
+            speed = 12f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            AudioHelper.PlayClip2D(bang, 1);
+            flash.Play();
+        }
     }
 }
