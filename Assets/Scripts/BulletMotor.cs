@@ -31,7 +31,7 @@ public class BulletMotor : MonoBehaviour
         _rb.AddRelativeForce(Vector3.forward * _bulletSpeed);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
         _destroyEffects = StartCoroutine(DestroySelf(_effectTime));
     }

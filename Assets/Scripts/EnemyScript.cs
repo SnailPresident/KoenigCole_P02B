@@ -8,9 +8,10 @@ public class EnemyScript : MonoBehaviour
     public event Action TargetFound = delegate { };
     public event Action TargetLost = delegate { };
     public GameObject enemy;
-
+    [SerializeField] AudioClip deathSound = null;
     public void Die()
     {
+        AudioHelper.PlayClip2D(deathSound, .25f);
         enemy.SetActive(false);
     }
 

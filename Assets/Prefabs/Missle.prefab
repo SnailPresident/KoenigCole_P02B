@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2774859393291450257}
   - component: {fileID: 7140571061589373292}
   - component: {fileID: 7493516988439418094}
+  - component: {fileID: 7474795660548418240}
   m_Layer: 0
   m_Name: Missle
   m_TagString: Untagged
@@ -127,5 +128,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletSpeed: 10
   _countdownTime: 10
-  _effectTime: 0.2
+  _effectTime: 0.03
   _velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &7474795660548418240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308961134896848241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ea57cfa7e1cf749b2db3c16537e1d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0.833

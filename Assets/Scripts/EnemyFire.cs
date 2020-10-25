@@ -68,11 +68,11 @@ public class EnemyFire : MonoBehaviour
 
     public void PlayShotSound()
     {
-        //AudioHelper.PlayClip2D(_shotAudio, .25f);
+        AudioHelper.PlayClip2D(_shotAudio, .25f);
     }
 
     public void PlayShotParticle()
     {
-       // _shotParticle.Play();
+        _shotParticle.Play();
     }
 }
