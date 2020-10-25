@@ -38,7 +38,7 @@ public class Level01Controller : MonoBehaviour
                 showMenu = false;
                 Debug.Log("Menu Off");
             }
-            
+
         }
 
         //Increase Score
@@ -46,7 +46,7 @@ public class Level01Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IncreaseScore(5);
-        }        
+        }
     }
 
     public void ExitLevel()

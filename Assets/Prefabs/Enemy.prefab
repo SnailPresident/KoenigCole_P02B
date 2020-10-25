@@ -122,4 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f73284f0e8b01469e1f37ecc3c4d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _target: {fileID: 0}
+  _targetingDistance: 20
   enemy: {fileID: 753720705622232079}

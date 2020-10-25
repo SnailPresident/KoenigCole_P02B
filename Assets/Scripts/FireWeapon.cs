@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FireWeapon : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class FireWeapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -33,9 +31,9 @@ public class FireWeapon : MonoBehaviour
         //cast debug ray
         Debug.DrawRay(rayOrigin.position, rayDirection * shootDistance, Color.red, 1f); ;
         //do raycast
-        if(Physics.Raycast(rayOrigin.position,rayDirection, out objectHit,shootDistance))
+        if (Physics.Raycast(rayOrigin.position, rayDirection, out objectHit, shootDistance))
         {
-            Debug.Log("Hit the "+objectHit.transform.name+".");
+            Debug.Log("Hit the " + objectHit.transform.name + ".");
             EnemyScript enemyScript = objectHit.transform.gameObject.GetComponent<EnemyScript>();
             if (enemyScript != null)
             {
