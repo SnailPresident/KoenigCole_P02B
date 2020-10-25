@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = .4f;
     public LayerMask groundMask;
     public float jumpHeight = 3f;
-
+    [SerializeField] AudioClip dieSound = null;
     Vector3 velocity;
     bool isGrounded;
 
@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerHealth <= 0)
         {
+            AudioHelper.PlayClip2D(dieSound, .25f);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             SceneLoader.LoadScene("MainMenu");

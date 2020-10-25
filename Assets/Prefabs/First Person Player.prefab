@@ -5183,6 +5183,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpHeight: 3
+  dieSound: {fileID: 8300000, guid: 6cc184a76c5f93e4aaac50dc7dca24d7, type: 3}
 --- !u!114 &84177308681232414
 MonoBehaviour:
   m_ObjectHideFlags: 0
