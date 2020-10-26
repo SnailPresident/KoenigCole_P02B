@@ -1064,6 +1064,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 196455847}
+    - target: {fileID: 6106467936483153525, guid: 05e26c1c0e621874ba257e1ef074d633, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 66732563}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05e26c1c0e621874ba257e1ef074d633, type: 3}
 --- !u!1 &1081941622
@@ -1747,6 +1751,10 @@ PrefabInstance:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 8300000, guid: 22c9a744156f4a041a34ba9685c4ed9a, type: 3}
+    - target: {fileID: 6106467936483153525, guid: 05e26c1c0e621874ba257e1ef074d633, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 66732563}
     - target: {fileID: 8050128780338194685, guid: 05e26c1c0e621874ba257e1ef074d633, type: 3}
       propertyPath: m_Icon
       value: 

@@ -9,9 +9,12 @@ public class EnemyScript : MonoBehaviour
     public event Action TargetLost = delegate { };
     public GameObject enemy;
     [SerializeField] AudioClip deathSound = null;
+    public Level01Controller level;
+   
     public void Die()
     {
         AudioHelper.PlayClip2D(deathSound, .25f);
+        level.IncreaseScore(5);
         enemy.SetActive(false);
     }
 
@@ -36,12 +39,6 @@ public class EnemyScript : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame

@@ -43,10 +43,10 @@ public class Level01Controller : MonoBehaviour
 
         //Increase Score
         //TODO Replace with real implementation Later
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             IncreaseScore(5);
-        }
+        }*/
     }
 
     public void ExitLevel()
