@@ -127,9 +127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _targetingDistance: 20
+  _targetingDistance: 25
   enemy: {fileID: 753720705622232079}
   deathSound: {fileID: 8300000, guid: 22c9a744156f4a041a34ba9685c4ed9a, type: 3}
+  level: {fileID: 0}
 --- !u!114 &5436308982874117
 MonoBehaviour:
   m_ObjectHideFlags: 0
