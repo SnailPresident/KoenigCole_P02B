@@ -8,6 +8,10 @@ public class Level01Controller : MonoBehaviour
     int _currentScore;
     public GameObject Menu;
     bool showMenu = false;
+    public GameObject crossHor;
+    public GameObject crossVer;
+    bool showCrosshair = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,7 @@ public class Level01Controller : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                showCrosshair = false;
                 Menu.SetActive(true);
                 showMenu = true;
                 Debug.Log("Menu On");
@@ -34,9 +39,21 @@ public class Level01Controller : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                showCrosshair = true;
                 Menu.SetActive(false);
                 showMenu = false;
                 Debug.Log("Menu Off");
+            }
+
+            if (showCrosshair == false)
+            {
+                crossHor.SetActive(false);
+                crossVer.SetActive(false);
+            }
+            else
+            {
+                crossHor.SetActive(true);
+                crossVer.SetActive(true);
             }
 
         }

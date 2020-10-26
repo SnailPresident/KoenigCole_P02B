@@ -242,6 +242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentScoreTextView: {fileID: 337028325}
   Menu: {fileID: 514440551}
+  crossHor: {fileID: 832649315}
+  crossVer: {fileID: 2009321060}
 --- !u!4 &66732564
 Transform:
   m_ObjectHideFlags: 0
