@@ -3735,6 +3735,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 84177308681232409, guid: 14ce1afb8444d954a811d43fc9f985cd, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 31d4389212af11643b126943576ddb22, type: 3}
     - target: {fileID: 84177308681232411, guid: 14ce1afb8444d954a811d43fc9f985cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.47

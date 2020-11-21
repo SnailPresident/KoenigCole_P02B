@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip dieSound = null;
     Vector3 velocity;
     bool isGrounded;
+
+    [SerializeField] AudioClip jumpSound = null;
+    [SerializeField] ParticleSystem jump = null;
     private int maxJumps = 2;
     int currentJump = 0;
 
@@ -44,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             currentJump++;
+            AudioHelper.PlayClip2D(jumpSound, .25f);
+            jump.Play();
         }
 
         velocity.y += gravity * Time.deltaTime;
