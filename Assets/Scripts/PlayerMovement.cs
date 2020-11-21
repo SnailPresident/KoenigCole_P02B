@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip bang = null;
     public CharacterController controller;
     public float speed = 12f;
-    public float gravity = -9.81f;
+    public float gravity = -12f;
 
     [SerializeField] Slider healthBar;
     public float playerHealth = 100f;
@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip dieSound = null;
     Vector3 velocity;
     bool isGrounded;
+    private int maxJumps = 2;
+    int currentJump = 0;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            currentJump = 0;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -37,9 +40,10 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && (isGrounded || maxJumps>currentJump))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            currentJump++;
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -67,6 +71,17 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = true;
             SceneLoader.LoadScene("MainMenu");
         }
+
+        if (currentJump == 2)
+        {
+            speed = 8;
+            gravity = -15f;
+        }
+        else
+        {
+            gravity = -12f;
+        }
+        
 
         healthBar.value = playerHealth;
     }
